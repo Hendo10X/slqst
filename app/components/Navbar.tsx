@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ShoppingBag, Menu, X } from 'lucide-react'
 import logo from "../../app/assets/SLQSTF.svg"
-import motion from 'framer-motion'
+
 
 const links = [
   { name: 'Men', href: '/men' },
