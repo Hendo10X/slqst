@@ -3,9 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import heroimage from "../../app/assets/Hero.jpeg"
 import { motion } from 'framer-motion'
+import { FadeUp } from './FadeUp'
 
 export default function Hero() {
     return (
+
         <section className="mx-auto max-w-2xl px-4 sm:p-8 lg:p-2 mb-10">
             <div className="flex flex-col items-center text-center">
                 <div className="relative w-full h-64 sm:h-80 rounded-lg overflow-hidden mb-4">
@@ -33,5 +35,6 @@ export default function Hero() {
                 </motion.button>
             </div>
         </section>
+
     )
 }
