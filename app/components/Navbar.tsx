@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation'
 import { ShoppingBag, Menu, X } from 'lucide-react'
 import logo from "../../app/assets/SLQSTF.svg"
 
-
 const links = [
   { name: 'Men', href: '/men' },
   { name: 'Women', href: '/women' },
@@ -23,22 +22,22 @@ export default function Navbar() {
   }
 
   return (
-    <header className="bg-white py-4 relative">
+    <header className="bg-white py-4 sticky top-0 z-50 ">
       <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center justify-between">
-          <Link href="/" className="w-32">
+        <div className="hidden lg:flex items-center justify-between max-w-6xl mx-auto">
+          <Link href="/" className="w-32 mr-8">
             <Image src={logo} alt="SleekQuest Logo" width={128} height={40} className="h-auto w-full" />
           </Link>
           <div className="flex-1 flex justify-center">
-            <nav className="flex space-x-7 font-inter font-medium">
+            <nav className="flex space-x-4 font-inter font-medium">
               {links.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`px-4 text-base transition-colors ${pathname === link.href
+                  className={`px-3 text-base transition-colors ${pathname === link.href
                     ? 'text-black'
-                    : 'text-gray-600 hover:text-black hover:bg-gray-100 py-2 px-3 rounded-sm'
+                    : 'text-gray-600 hover:text-black hover:bg-gray-100 py-2 rounded-sm'
                     }`}
                 >
                   {link.name}
@@ -46,7 +45,7 @@ export default function Navbar() {
               ))}
             </nav>
           </div>
-          <button className="text-gray-600 hover:bg-gray-100 p-4 rounded-md">
+          <button className="text-gray-600 hover:bg-gray-100 p-3 rounded-md ml-8">
             <ShoppingBag className="h-6 w-6" />
           </button>
         </div>
